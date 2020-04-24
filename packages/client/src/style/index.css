@@ -18,3 +18,7 @@
 .controller-column > a > svg {
     @apply h-full m-auto;
 }
+
+.backdropFilter {
+    backdrop-filter: blur(5px);
+}

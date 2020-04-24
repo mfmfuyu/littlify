@@ -32,25 +32,45 @@ export default class Player extends React.Component<Props, {}> {
         nextTracks.pop();
         return (
             <>
-                <div className={classNames("flex", "border-gray-400")}>
+                <div
+                    className={classNames(
+                        "h-full",
+                        "w-full",
+                        "bg-no-repeat",
+                        "bg-center",
+                        "bg-cover",
+                        "absolute",
+                        "top-0",
+                        "left-0"
+                    )}
+                    style={{
+                        backgroundImage: `url(${track.album.images[2].url})`,
+                    }}
+                ></div>
+                <div
+                    className={classNames(
+                        "flex",
+                        "h-screen",
+                        "p-4",
+                        "backdropFilter",
+                        "z-10",
+                        "relative"
+                    )}
+                >
                     <div
                         className={classNames(
                             "jucket-column",
                             "flex",
-                            "h-screen",
                             "flex-grow-0",
-                            "flex-shrink-0",
-                            "border-r",
-                            "dark:border-gray-700"
+                            "flex-shrink-0"
                         )}
                     >
                         <img
                             src={track.album.images[2].url}
                             className={classNames(
                                 "self-center",
-                                "h-screen",
-                                "max-w-screen-1/2",
-                                "max-h-screen-w-1/2"
+                                "max-w-full",
+                                "max-h-full"
                             )}
                         />
                     </div>
@@ -60,7 +80,9 @@ export default class Player extends React.Component<Props, {}> {
                             "flex-1",
                             "flex",
                             "flex-col",
-                            "w-full"
+                            "w-full",
+                            "pr-4",
+                            "pl-4"
                         )}
                     >
                         <div
@@ -70,8 +92,6 @@ export default class Player extends React.Component<Props, {}> {
                                 "items-center",
                                 "pl-8",
                                 "text-gray-900",
-                                "bg-white",
-                                "dark:bg-gray-900",
                                 "dark:text-gray-200"
                             )}
                         >
@@ -125,9 +145,7 @@ export default class Player extends React.Component<Props, {}> {
                             "queue-column",
                             "flex",
                             "flex-col",
-                            "w-1/4",
-                            "border-l",
-                            "dark:border-gray-700"
+                            "w-1/4"
                         )}
                     >
                         <p>前のトラック</p>
