@@ -70,7 +70,8 @@ export default class Player extends React.Component<Props, {}> {
                             className={classNames(
                                 "self-center",
                                 "max-w-full",
-                                "max-h-full"
+                                "max-h-full",
+                                "rounded-lg"
                             )}
                         />
                     </div>

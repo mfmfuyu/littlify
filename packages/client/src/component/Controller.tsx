@@ -68,7 +68,8 @@ export default class Controller extends React.Component<Props, {}> {
                     "bg-gray-200",
                     "border-t",
                     "dark:bg-gray-800",
-                    "dark:border-gray-700"
+                    "dark:border-gray-700",
+                    "rounded-lg"
                 )}
             >
                 <div
